@@ -1,105 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Demande de devis - JC Service</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demande de devis | JC Service</title>
+  <meta name="description" content="Demandez un devis pompe à chaleur, climatisation, entretien ou salle de bain. Réponse sous 24h. Ittenheim.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="logo.png" alt="JC Service"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">Menu</button>
+      <nav class="site-nav">
+        <a href="index.html">Accueil</a>
+        <a href="pompe-a-chaleur.html">Pompe à chaleur</a>
+        <a class="is-active" href="contact.html">Devis</a>
+      </nav>
+      <div class="header-actions">
+        <a class="call" href="tel:+33685306973">06 85 30 69 73</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero center">
+      <div class="wrap">
+        <p class="baseline">Contact</p>
+        <h1>Parlons de votre projet</h1>
+        <p class="hero-desc">Réponse sous 24h. Les champs logement aident à qualifier la visite.</p>
+      </div>
+    </section>
+    <section class="contact-page">
+      <div class="contact-box">
+        <form action="https://formsubmit.co/instal.jcservice@gmail.com" method="POST">
+          <input type="hidden" name="_next" value="https://jcservice.fr/merci.html">
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis JC Service">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_captcha" value="false">
 
-<!-- RETOUR -->
-<a href="index.html" class="back-home">← Accueil</a>
+          <input type="text" name="Nom et prénom" placeholder="Nom et prénom" required>
+          <input type="tel" name="Téléphone" placeholder="Téléphone" required>
+          <input type="email" name="Email" placeholder="Email" required>
+          <input type="text" name="Commune" placeholder="Commune">
 
-<!-- HERO -->
-<section class="hero">
-  <img src="logo.png" class="logo">
+          <select name="Type de demande" required>
+            <option value="">Type de demande</option>
+            <option>Pompe à chaleur</option>
+            <option>Ballon thermodynamique</option>
+            <option>Climatisation</option>
+            <option>Chauffage</option>
+            <option>Salle de bain</option>
+            <option>Entretien</option>
+          </select>
 
-  <p class="baseline">Contact & devis</p>
+          <select name="Énergie actuelle">
+            <option value="">Énergie actuelle (si connu)</option>
+            <option>Gaz</option>
+            <option>Fioul</option>
+            <option>Électricité</option>
+            <option>Pompe à chaleur</option>
+            <option>Autre / je ne sais pas</option>
+          </select>
 
-  <h1>Parlons de votre projet</h1>
-
-  <p class="hero-desc">
-    Réponse rapide sous 24h
-  </p>
-</section>
-
-<!-- FORMULAIRE -->
-<section class="contact-page">
-
-  <div class="contact-box">
-
-    <form action="https://formsubmit.co/instal.jcservice@gmail.com" method="POST">
-
-      <!-- CONFIG -->
-      <input type="hidden" name="_next" value="https://jcservice67.github.io/jc-service/merci.html">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="Nouvelle demande de devis JC Service">
-
-      <!-- CHAMPS -->
-      <input type="text" name="Nom et prénom" placeholder="Nom et prénom" required>
-
-      <input type="tel" name="Téléphone" placeholder="Téléphone" required>
-
-      <input type="email" name="Email" placeholder="Email" required>
-
-      <select name="Type de demande" required>
-        <option value="">Type de demande</option>
-        <option>Salle de bain</option>
-        <option>Chauffage</option>
-        <option>Climatisation</option>
-        <option>Entretien</option>
-      </select>
-
-      <textarea name="Message" placeholder="Décrivez votre projet..." rows="5"></textarea>
-
-      <!-- BOUTON -->
-      <button type="submit" class="btn">Envoyer la demande</button>
-
-    </form>
-
-  </div>
-
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <h2>Besoin d’une réponse rapide ?</h2>
-  <a href="tel:0685306973" class="btn">Appeler maintenant</a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-container">
-
-    <h3>JC Service</h3>
-
-    <p class="footer-sub">
-      Salle de bain • Chauffage • Climatisation
-    </p>
-
-    <p>
-      9a route de Paris<br>
-      67117 Ittenheim
-    </p>
-
-    <p class="contact">
-      📞 06 85 30 69 73<br>
-      ✉️ instal.jcservice@gmail.com
-    </p>
-
-    <hr>
-
-    <p class="copyright">
-      © 2026 JC Service — Tous droits réservés
-    </p>
-
-  </div>
-</footer>
-
+          <input type="text" name="Surface m2" placeholder="Surface chauffée (m²)">
+          <textarea name="Message" placeholder="Décrivez le projet, l’existant, les contraintes…" rows="5"></textarea>
+          <p class="note">En envoyant, vous acceptez d’être recontacté au sujet de cette demande. <a href="mentions-legales.html">Mentions</a></p>
+          <button type="submit" class="btn">Envoyer la demande</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <section class="cta">
+    <h2>Besoin d’une réponse immédiate ?</h2>
+    <a class="btn" href="tel:+33685306973">Appeler maintenant</a>
+  </section>
+  <footer>
+    <div class="wrap"><p>JC Service · 9a route de Paris, 67117 Ittenheim</p></div>
+    <div class="wrap legal">© 2026 JC Service</div>
+  </footer>
+  <nav class="mobile-cta" aria-label="Actions rapides">
+    <a href="tel:+33685306973">Appeler</a>
+    <a class="devis" href="#top">Devis</a>
+  </nav>
+  <script src="site.js"></script>
 </body>
 </html>

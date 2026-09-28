@@ -1,148 +1,125 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Demande d’entretien - JC Service</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demande d’entretien | JC Service</title>
+  <meta name="description" content="Souscrire un contrat d’entretien JC Service : estimation selon équipements et formule.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="logo.png" alt="JC Service"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">Menu</button>
+      <nav class="site-nav">
+        <a href="index.html">Accueil</a>
+        <a href="entretien-depannage.html">Entretien</a>
+        <a href="nos-formules.html">Tarifs</a>
+      </nav>
+      <div class="header-actions">
+        <a class="call" href="tel:+33685306973">06 85 30 69 73</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero center">
+      <div class="wrap">
+        <h1>Demande d’entretien</h1>
+        <p class="hero-desc">Estimation selon la formule et les équipements. Clim : à partir de.</p>
+      </div>
+    </section>
+    <section class="contact-page">
+      <div class="contact-box">
+        <form action="https://formsubmit.co/instal.jcservice@gmail.com" method="POST">
+          <input type="hidden" name="_next" value="https://jcservice.fr/merci.html">
+          <input type="hidden" name="_subject" value="Demande entretien JC Service">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="Estimation affichée" id="estimationField" value="">
 
-<body class="form-page clean-layout">
+          <input type="text" name="Nom" placeholder="Nom et prénom" required>
+          <input type="tel" name="Téléphone" placeholder="Téléphone" required>
+          <input type="email" name="Email" placeholder="Email">
+          <input type="text" name="Commune" placeholder="Commune">
 
-<a href="index.html" class="back-home">← Accueil</a>
+          <select name="Formule" id="formule" required>
+            <option value="">Choisir une formule</option>
+            <option value="essentiel">Essentiel</option>
+            <option value="confort">Confort</option>
+            <option value="privilege">Privilège</option>
+          </select>
 
-<!-- HERO -->
-<section class="hero-light">
-  <h1>Demande d’entretien</h1>
-  <p>Obtenez une estimation rapide adaptée à votre installation</p>
-</section>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="Equipements" value="Chaudière gaz" data-key="chaudiere_gaz"> Chaudière gaz</label>
+            <label><input type="checkbox" name="Equipements" value="Chaudière fioul" data-key="chaudiere_fioul"> Chaudière fioul</label>
+            <label><input type="checkbox" name="Equipements" value="Pompe à chaleur" data-key="pac"> Pompe à chaleur</label>
+            <label><input type="checkbox" name="Equipements" value="Ballon thermodynamique" data-key="ballon"> Ballon thermodynamique</label>
+            <label><input type="checkbox" name="Equipements" value="Climatisation" data-key="clim"> Climatisation</label>
+            <label><input type="checkbox" name="Equipements" value="Adoucisseur" data-key="adoucisseur"> Adoucisseur</label>
+          </div>
 
-<!-- FORM -->
-<section class="contact-page">
+          <div class="price-box" id="priceBox">Sélectionnez vos équipements</div>
+          <textarea name="Message" placeholder="Précisions (marque, année, nombre d’unités clim…)" rows="4"></textarea>
+          <p class="note">En envoyant, vous acceptez d’être recontacté. <a href="mentions-legales.html">Mentions</a></p>
+          <button type="submit" class="btn">Envoyer la demande</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap"><p><a href="mentions-legales.html">Mentions légales</a></p></div>
+    <div class="wrap legal">© 2026 JC Service</div>
+  </footer>
+  <nav class="mobile-cta" aria-label="Actions rapides">
+    <a href="tel:+33685306973">Urgence</a>
+    <a class="devis" href="contact.html">Devis travaux</a>
+  </nav>
+  <script src="site.js"></script>
+  <script>
+    var prices = {
+      essentiel: { chaudiere_gaz: 140, chaudiere_fioul: 160, pac: 160, ballon: 100, clim: 140, adoucisseur: 130 },
+      confort: { chaudiere_gaz: 170, chaudiere_fioul: 190, pac: 190, ballon: 130, clim: 170, adoucisseur: 160 },
+      privilege: { chaudiere_gaz: 200, chaudiere_fioul: 220, pac: 220, ballon: 160, clim: 200, adoucisseur: 190 }
+    };
+    var formule = document.getElementById("formule");
+    var checkboxes = document.querySelectorAll('input[name="Equipements"]');
+    var priceBox = document.getElementById("priceBox");
+    var estimationField = document.getElementById("estimationField");
 
-<div class="contact-box">
+    function updatePrice() {
+      var f = formule.value;
+      if (!f) {
+        priceBox.textContent = "Sélectionnez une formule";
+        estimationField.value = "";
+        return;
+      }
+      var total = 0;
+      var hasClim = false;
+      checkboxes.forEach(function (cb) {
+        if (cb.checked) {
+          total += prices[f][cb.getAttribute("data-key")];
+          if (cb.getAttribute("data-key") === "clim") hasClim = true;
+        }
+      });
+      if (total === 0) {
+        priceBox.textContent = "Sélectionnez vos équipements";
+        estimationField.value = "";
+        return;
+      }
+      var label = hasClim ? ("Estimation à partir de " + total + "€") : ("Au prix de " + total + "€");
+      priceBox.textContent = label;
+      estimationField.value = label;
+    }
 
-<img src="logo.png" class="contact-logo">
-
-<form action="https://formsubmit.co/instal.jcservice@gmail.com" method="POST">
-
-<input type="hidden" name="_next" value="https://jcservice67.github.io/jc-service/merci.html">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="Demande entretien JC Service">
-
-<input type="text" name="Nom" placeholder="Nom et prénom" required>
-<input type="tel" name="Téléphone" placeholder="Téléphone" required>
-<input type="email" name="Email" placeholder="Email">
-
-<select name="Formule" id="formule" required>
-<option value="">Choisir une formule</option>
-<option value="essentiel">Essentiel</option>
-<option value="confort">Confort</option>
-<option value="privilege">Privilège</option>
-</select>
-
-<div class="checkbox-group">
-<label><input type="checkbox" value="chaudiere_gaz"> Chaudière gaz</label>
-<label><input type="checkbox" value="chaudiere_fioul"> Chaudière fioul</label>
-<label><input type="checkbox" value="pac"> Pompe à chaleur</label>
-<label><input type="checkbox" value="ballon"> Ballon thermodynamique</label>
-<label><input type="checkbox" value="clim"> Climatisation</label>
-<label><input type="checkbox" value="adoucisseur"> Adoucisseur</label>
-</div>
-
-<div class="price-box" id="priceBox">
-Sélectionnez vos équipements
-</div>
-
-<textarea name="Message" placeholder="Précisions si besoin..." rows="4"></textarea>
-
-<button type="submit">Envoyer la demande</button>
-
-</form>
-
-</div>
-
-</section>
-
-<!-- URGENCE -->
-<a href="tel:+33685306973" class="urgence-btn">
-📞 Urgence ? Appelez-nous
-</a>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-container">
-    <h3>JC Service</h3>
-    <p class="footer-sub">Salle de bain • Chauffage • Climatisation</p>
-    <p>9a route de Paris<br>67117 Ittenheim</p>
-    <p class="contact">📞 06 85 30 69 73<br>✉️ instal.jcservice@gmail.com</p>
-    <hr>
-    <p class="copyright">© 2026 JC Service — Tous droits réservés</p>
-  </div>
-</footer>
-
-<script>
-
-/* PRIX */
-const prices = {
-  essentiel:{chaudiere_gaz:140, chaudiere_fioul:160, pac:160, ballon:100, clim:140, adoucisseur:130},
-  confort:{chaudiere_gaz:170, chaudiere_fioul:190, pac:190, ballon:130, clim:170, adoucisseur:160},
-  privilege:{chaudiere_gaz:200, chaudiere_fioul:220, pac:220, ballon:160, clim:200, adoucisseur:190}
-};
-
-const formule = document.getElementById("formule");
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-const priceBox = document.getElementById("priceBox");
-
-function updatePrice(){
-let total = 0;
-const f = formule.value;
-
-if(!f){
-priceBox.innerText = "Sélectionnez une formule";
-return;
-}
-
-let hasClim = false;
-
-checkboxes.forEach(cb=>{
-if(cb.checked){
-total += prices[f][cb.value];
-if(cb.value === "clim") hasClim = true;
-}
-});
-
-if(total === 0){
-priceBox.innerText = "Sélectionnez vos équipements";
-return;
-}
-
-if(hasClim){
-priceBox.innerText = "Estimation à partir de " + total + "€";
-}else{
-priceBox.innerText = "Au prix de " + total + "€";
-}
-}
-
-/* PRÉ-SÉLECTION */
-window.addEventListener("DOMContentLoaded", () => {
-const params = new URLSearchParams(window.location.search);
-const plan = params.get("plan");
-
-if(plan && prices[plan]){
-formule.value = plan;
-}
-
-updatePrice();
-});
-
-formule.addEventListener("change", updatePrice);
-checkboxes.forEach(cb=> cb.addEventListener("change", updatePrice));
-
-</script>
-
+    window.addEventListener("DOMContentLoaded", function () {
+      var plan = new URLSearchParams(window.location.search).get("plan");
+      if (plan && prices[plan]) formule.value = plan;
+      updatePrice();
+    });
+    formule.addEventListener("change", updatePrice);
+    checkboxes.forEach(function (cb) { cb.addEventListener("change", updatePrice); });
+  </script>
 </body>
 </html>

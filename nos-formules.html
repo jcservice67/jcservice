@@ -1,238 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Nos formules - JC Service</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-font-family:'Inter', sans-serif;
-margin:0;
-background:#ffffff;
-}
-
-/* TABLE */
-.table-container{
-padding:60px 20px;
-overflow-x:auto;
--webkit-overflow-scrolling:touch;
-}
-
-.table{
-display:grid;
-grid-template-columns:220px repeat(3,1fr);
-min-width:800px;
-max-width:1100px;
-margin:auto;
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 20px 50px rgba(0,0,0,0.08);
-}
-
-.cell{
-padding:18px;
-border-bottom:1px solid #eee;
-text-align:center;
-font-size:14px;
-}
-
-.feature{
-text-align:left;
-font-weight:500;
-background:#fafafa;
-}
-
-.header{
-font-weight:600;
-background:#f5f5f5;
-}
-
-/* COLONNES */
-.col{
-opacity:0.5;
-transition:0.3s ease;
-}
-
-.col.active{
-background:#1C1C1C;
-color:white;
-opacity:1;
-}
-
-/* BOUTONS */
-.btn{
-display:inline-block;
-padding:10px 18px;
-background:#1C1C1C;
-color:white;
-border-radius:25px;
-text-decoration:none;
-margin-top:10px;
-transition:0.3s;
-font-size:14px;
-}
-
-.btn:hover{
-opacity:0.8;
-}
-
-.col.active .btn{
-background:#fff;
-color:#1C1C1C;
-}
-
-/* URGENCE BUTTON */
-.urgence-btn{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#1C1C1C;
-color:#fff;
-padding:12px 18px;
-border-radius:30px;
-text-decoration:none;
-font-size:14px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarifs d’entretien | JC Service</title>
+  <meta name="description" content="Grille tarifaire entretien chaudière, pompe à chaleur, ballon thermodynamique, climatisation. Formules Essentiel, Confort, Privilège.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="logo.png" alt="JC Service"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">Menu</button>
+      <nav class="site-nav">
+        <a href="index.html">Accueil</a>
+        <a href="entretien-depannage.html">Entretien</a>
+        <a href="contact-sav.html">Souscrire</a>
+      </nav>
+      <div class="header-actions">
+        <a class="call" href="tel:+33685306973">06 85 30 69 73</a>
+        <a class="btn" href="contact-sav.html">Choisir</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Nos formules d’entretien</h1>
+        <p class="hero-desc">Prix TTC indicatifs. Clim : « à partir de » selon le nombre d’unités.</p>
+      </div>
+    </section>
+    <div class="wrap table-container">
+      <div class="table">
+        <div class="cell header"></div>
+        <div class="cell header col" data-plan="essentiel">Essentiel</div>
+        <div class="cell header col" data-plan="confort">Confort</div>
+        <div class="cell header col" data-plan="privilege">Privilège</div>
 
-<a href="index.html" class="back-home">← Accueil</a>
+        <div class="cell feature">Chaudière gaz</div>
+        <div class="cell col" data-plan="essentiel">140€</div>
+        <div class="cell col" data-plan="confort">170€</div>
+        <div class="cell col" data-plan="privilege">200€</div>
 
-<section class="hero">
-  <img src="logo.png" class="logo">
-  <h1>Nos formules d’entretien</h1>
-</section>
+        <div class="cell feature">Chaudière fioul</div>
+        <div class="cell col" data-plan="essentiel">160€</div>
+        <div class="cell col" data-plan="confort">190€</div>
+        <div class="cell col" data-plan="privilege">220€</div>
 
-<section class="table-container">
+        <div class="cell feature">Pompe à chaleur</div>
+        <div class="cell col" data-plan="essentiel">160€</div>
+        <div class="cell col" data-plan="confort">190€</div>
+        <div class="cell col" data-plan="privilege">220€</div>
 
-<div class="table">
+        <div class="cell feature">Ballon thermodynamique</div>
+        <div class="cell col" data-plan="essentiel">100€</div>
+        <div class="cell col" data-plan="confort">130€</div>
+        <div class="cell col" data-plan="privilege">160€</div>
 
-<div class="cell header"></div>
-<div class="cell header col" data-plan="essentiel">Essentiel</div>
-<div class="cell header col" data-plan="confort">Confort</div>
-<div class="cell header col" data-plan="privilege">Privilège</div>
+        <div class="cell feature">Climatisation</div>
+        <div class="cell col" data-plan="essentiel">140€</div>
+        <div class="cell col" data-plan="confort">170€</div>
+        <div class="cell col" data-plan="privilege">200€</div>
 
-<div class="cell feature">Chaudière gaz</div>
-<div class="cell col" data-plan="essentiel">140€</div>
-<div class="cell col" data-plan="confort">170€</div>
-<div class="cell col" data-plan="privilege">200€</div>
+        <div class="cell feature">Adoucisseur</div>
+        <div class="cell col" data-plan="essentiel">130€</div>
+        <div class="cell col" data-plan="confort">160€</div>
+        <div class="cell col" data-plan="privilege">190€</div>
 
-<div class="cell feature">Chaudière fioul</div>
-<div class="cell col" data-plan="essentiel">160€</div>
-<div class="cell col" data-plan="confort">190€</div>
-<div class="cell col" data-plan="privilege">220€</div>
+        <div class="cell feature">Prestations</div>
+        <div class="cell col" data-plan="essentiel">Entretien annuel, vérification, attestation</div>
+        <div class="cell col" data-plan="confort">Entretien + 1 dépannage inclus</div>
+        <div class="cell col" data-plan="privilege">Entretien, dépannage illimité, priorité, −15% pièces</div>
 
-<div class="cell feature">Pompe à chaleur</div>
-<div class="cell col" data-plan="essentiel">160€</div>
-<div class="cell col" data-plan="confort">190€</div>
-<div class="cell col" data-plan="privilege">220€</div>
-
-<div class="cell feature">Ballon thermodynamique</div>
-<div class="cell col" data-plan="essentiel">100€</div>
-<div class="cell col" data-plan="confort">130€</div>
-<div class="cell col" data-plan="privilege">160€</div>
-
-<div class="cell feature">Climatisation</div>
-<div class="cell col" data-plan="essentiel">140€</div>
-<div class="cell col" data-plan="confort">170€</div>
-<div class="cell col" data-plan="privilege">200€</div>
-
-<div class="cell feature">Adoucisseur</div>
-<div class="cell col" data-plan="essentiel">130€</div>
-<div class="cell col" data-plan="confort">160€</div>
-<div class="cell col" data-plan="privilege">190€</div>
-
-<div class="cell feature">Prestations</div>
-
-<div class="cell col" data-plan="essentiel">
-✔ Entretien annuel<br>
-✔ Vérification<br>
-✔ Attestation
-</div>
-
-<div class="cell col" data-plan="confort">
-✔ Entretien annuel<br>
-✔ Vérification<br>
-✔ 1 dépannage inclus
-</div>
-
-<div class="cell col" data-plan="privilege">
-✔ Entretien annuel<br>
-✔ Dépannage illimité<br>
-✔ Intervention prioritaire<br>
-✔ -15% pièces
-</div>
-
-<div class="cell"></div>
-
-<div class="cell col" data-plan="essentiel">
-<a class="btn" href="contact-sav.html?plan=essentiel">Choisir</a>
-</div>
-
-<div class="cell col" data-plan="confort">
-<a class="btn" href="contact-sav.html?plan=confort">Choisir</a>
-</div>
-
-<div class="cell col" data-plan="privilege">
-<a class="btn" href="contact-sav.html?plan=privilege">Choisir</a>
-</div>
-
-</div>
-
-</section>
-
-<a href="tel:+33685306973" class="urgence-btn">
-📞 Une urgence ? Appelez-nous
-</a>
-
-<footer>
-  <div class="footer-container">
-
-    <h3>JC Service</h3>
-
-    <p class="footer-sub">
-      Salle de bain • Chauffage • Climatisation
-    </p>
-
-    <p>
-      9a route de Paris<br>
-      67117 Ittenheim
-    </p>
-
-    <p class="contact">
-      📞 06 85 30 69 73<br>
-      ✉️ instal.jcservice@gmail.com
-    </p>
-
-    <hr>
-
-    <p class="copyright">
-      © 2026 JC Service — Tous droits réservés
-    </p>
-
-  </div>
-</footer>
-
-<script>
-const params = new URLSearchParams(window.location.search);
-const plan = params.get("plan");
-
-if(plan){
-document.querySelectorAll(`.col[data-plan="${plan}"]`)
-.forEach(el=> el.classList.add("active"));
-}
-</script>
-
+        <div class="cell"></div>
+        <div class="cell col" data-plan="essentiel"><a class="btn" href="contact-sav.html?plan=essentiel">Choisir</a></div>
+        <div class="cell col" data-plan="confort"><a class="btn" href="contact-sav.html?plan=confort">Choisir</a></div>
+        <div class="cell col" data-plan="privilege"><a class="btn" href="contact-sav.html?plan=privilege">Choisir</a></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap"><p><a href="mentions-legales.html">Mentions légales</a></p></div>
+    <div class="wrap legal">© 2026 JC Service</div>
+  </footer>
+  <nav class="mobile-cta" aria-label="Actions rapides">
+    <a href="tel:+33685306973">Urgence</a>
+    <a class="devis" href="contact-sav.html">Souscrire</a>
+  </nav>
+  <script src="site.js"></script>
+  <script>
+    var plan = new URLSearchParams(window.location.search).get("plan");
+    if (plan) {
+      document.querySelectorAll('.col[data-plan="' + plan + '"]').forEach(function (el) {
+        el.classList.add("active");
+      });
+    }
+  </script>
 </body>
 </html>

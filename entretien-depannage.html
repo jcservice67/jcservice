@@ -1,135 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Entretien & Dépannage - JC Service</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entretien et dépannage | JC Service</title>
+  <meta name="description" content="Contrats d’entretien chaudière, pompe à chaleur, ballon thermodynamique et climatisation à Ittenheim. Formules Essentiel, Confort, Privilège.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-<a href="index.html" class="back-home">← Accueil</a>
-
-<a href="entretien-depannage.html" class="top-btn">
-  Entretien & Dépannage
-</a>
-
-<!-- HERO -->
-<section class="hero">
-  <img src="logo.png" class="logo">
-
-  <p class="baseline">Entretien & dépannage</p>
-
-  <h1>Évitez les pannes, gardez l’esprit tranquille</h1>
-
-  <p class="hero-desc">
-    Moins de pannes, moins de coûts, plus de sérénité au quotidien
-  </p>
-</section>
-
-<!-- INTRO -->
-<section class="intro">
-  <p class="highlight-text">
-    Un entretien régulier améliore les performances,
-    réduit les risques de panne et prolonge la durée de vie de votre installation.
-  </p>
-
-  <p class="impact">
-    Les pannes arrivent souvent au pire moment — mieux vaut anticiper.
-  </p>
-
-  <p class="highlight-inline">
-    Entretien • Dépannage • Optimisation • Durabilité
-  </p>
-</section>
-
-<!-- CONTRATS -->
-<section class="contrats">
-
-  <h2>Choisissez votre tranquillité</h2>
-  <p class="subtitle">Des formules simples et adaptées à votre usage</p>
-
-  <div class="plans">
-
-    <!-- ESSENTIEL -->
-    <div class="plan">
-      <h3>Essentiel</h3>
-      <p class="price">À partir de 100€</p>
-      <p class="desc">L’entretien minimum pour rester conforme</p>
-
-      <ul>
-        <li>✔ Entretien annuel complet</li>
-        <li>✔ Contrôle sécurité</li>
-      </ul>
-
-      <a href="nos-formules.html?plan=essentiel" class="btn">Choisir</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="logo.png" alt="JC Service"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">Menu</button>
+      <nav class="site-nav">
+        <a href="index.html">Accueil</a>
+        <a href="pompe-a-chaleur.html">Pompe à chaleur</a>
+        <a href="ballon-thermodynamique.html">Ballon thermo.</a>
+        <a href="climatisation.html">Climatisation</a>
+        <a class="is-active" href="entretien-depannage.html">Entretien</a>
+        <a href="aides.html">Aides</a>
+        <a href="salle-de-bain.html">Salle de bain</a>
+        <a href="a-propos.html">L’entreprise</a>
+      </nav>
+      <div class="header-actions">
+        <a class="call" href="tel:+33685306973">06 85 30 69 73</a>
+        <a class="btn" href="contact.html">Devis</a>
+      </div>
     </div>
-
-    <!-- PRIVILEGE -->
-    <div class="plan vip">
-      <div class="badge">Recommandé</div>
-
-      <h3>Privilège</h3>
-      <p class="price">À partir de 160€</p>
-      <p class="desc highlight">Vous ne vous occupez de rien, on gère tout</p>
-
-      <ul>
-        <li>✔ Dépannage sans surcoût</li>
-        <li>✔ Intervention prioritaire</li>
-        <li>✔ Entretien complet inclus</li>
-        <li>✔ Remise sur pièces</li>
-      </ul>
-
-      <a href="nos-formules.html?plan=privilege" class="btn primary">
-        Être tranquille toute l’année
-      </a>
-    </div>
-
-    <!-- CONFORT -->
-    <div class="plan">
-      <h3>Confort</h3>
-      <p class="price">À partir de 130€</p>
-      <p class="desc">Le bon équilibre entre sécurité et budget</p>
-
-      <ul>
-        <li>✔ Entretien annuel</li>
-        <li>✔ Contrôle sécurité</li>
-        <li>✔ 1 dépannage inclus</li>
-      </ul>
-
-      <a href="nos-formules.html?plan=confort" class="btn">Choisir</a>
-    </div>
-
-  </div>
-
-  <p class="proof">
-    +80% de nos clients choisissent la formule Privilège pour éviter les imprévus
-  </p>
-
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <h2>Une panne ?</h2>
-  <p>Nous intervenons rapidement pour sécuriser votre installation</p>
-  <a href="tel:+33685306973" class="btn">Appeler maintenant</a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-container">
-    <h3>JC Service</h3>
-    <p class="footer-sub">Salle de bain • Chauffage • Climatisation</p>
-    <p>9a route de Paris<br>67117 Ittenheim</p>
-    <p class="contact">📞 06 85 30 69 73<br>✉️ instal.jcservice@gmail.com</p>
-    <hr>
-    <p class="copyright">© 2026 JC Service — Tous droits réservés</p>
-  </div>
-</footer>
-
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="baseline">Contrats</p>
+        <h1>Évitez les pannes, gardez l’esprit tranquille.</h1>
+        <p class="hero-desc">Entretien annuel, attestation, dépannage selon formule. Prix affichés, sans jeu de piste.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <h2>Choisissez votre tranquillité</h2>
+        <div class="plans">
+          <div class="plan">
+            <h3>Essentiel</h3>
+            <p class="price">À partir de 100€</p>
+            <p class="desc">L’entretien pour rester conforme</p>
+            <ul>
+              <li>Entretien annuel complet</li>
+              <li>Contrôle sécurité</li>
+              <li>Attestation</li>
+            </ul>
+            <a href="nos-formules.html?plan=essentiel" class="btn">Voir le tarif</a>
+          </div>
+          <div class="plan vip">
+            <div class="badge">Recommandé</div>
+            <h3>Privilège</h3>
+            <p class="price">À partir de 160€</p>
+            <p class="desc highlight">On gère, vous n’y pensez plus</p>
+            <ul>
+              <li>Entretien complet inclus</li>
+              <li>Dépannage selon contrat</li>
+              <li>Intervention prioritaire</li>
+              <li>Remise sur pièces</li>
+            </ul>
+            <a href="nos-formules.html?plan=privilege" class="btn primary">Être tranquille</a>
+          </div>
+          <div class="plan">
+            <h3>Confort</h3>
+            <p class="price">À partir de 130€</p>
+            <p class="desc">Équilibre sécurité / budget</p>
+            <ul>
+              <li>Entretien annuel</li>
+              <li>Contrôle sécurité</li>
+              <li>1 dépannage inclus</li>
+            </ul>
+            <a href="nos-formules.html?plan=confort" class="btn">Voir le tarif</a>
+          </div>
+        </div>
+        <p class="proof">Les prix exacts dépendent de l’équipement (PAC, CET, gaz, fioul, clim). Détail dans le tableau.</p>
+      </div>
+    </section>
+  </main>
+  <section class="cta">
+    <h2>Une panne ?</h2>
+    <p>Appelez pour une intervention.</p>
+    <a class="btn" href="tel:+33685306973">06 85 30 69 73</a>
+  </section>
+  <footer>
+    <div class="wrap"><p>JC Service · <a href="mentions-legales.html">Mentions</a></p></div>
+    <div class="wrap legal">© 2026 JC Service</div>
+  </footer>
+  <nav class="mobile-cta" aria-label="Actions rapides">
+    <a href="tel:+33685306973">Appeler</a>
+    <a class="devis" href="contact-sav.html">Contrat</a>
+  </nav>
+  <script src="site.js"></script>
 </body>
 </html>

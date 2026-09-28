@@ -1,173 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Merci - JC Service</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<style>
-
-/* SECTION MERCI */
-
-.merci-section{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-background:#F9F9F9;
-padding:40px 20px;
-text-align:center;
-}
-
-.merci-container{
-max-width:600px;
-background:#FFFFFF;
-padding:50px 40px;
-border-radius:16px;
-box-shadow:0 15px 40px rgba(0,0,0,0.06);
-}
-
-/* LOGO */
-.merci-logo{
-max-width:220px;
-margin-bottom:30px;
-}
-
-/* TITRE */
-.merci-container h1{
-font-family:'Playfair Display', serif;
-font-size:32px;
-margin-bottom:20px;
-}
-
-/* TEXTE */
-.merci-text{
-font-size:16px;
-margin-bottom:30px;
-color:#6B7280;
-}
-
-/* BOX INFO */
-.merci-box{
-background:#F5F5F5;
-padding:25px;
-border-radius:12px;
-margin-bottom:30px;
-}
-
-/* CONTACT */
-.merci-contact p{
-margin-bottom:15px;
-font-weight:500;
-}
-
-/* BOUTON */
-.btn{
-background:#C8A96A;
-color:#1C1C1C;
-padding:14px 30px;
-border-radius:6px;
-text-decoration:none;
-font-weight:500;
-display:inline-block;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#b89658;
-}
-
-/* RETOUR */
-.retour{
-display:inline-block;
-margin-top:25px;
-text-decoration:none;
-color:#1C1C1C;
-font-weight:500;
-}
-
-.retour:hover{
-text-decoration:underline;
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demande envoyée | JC Service</title>
+  <meta name="description" content="Votre demande JC Service a bien été envoyée.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-<section class="merci-section">
-
-<div class="merci-container">
-
-<!-- LOGO -->
-<img src="logo.png" alt="JC Service" class="merci-logo">
-
-<h1>Demande envoyée</h1>
-
-<p class="merci-text">
-Merci pour votre confiance.<br>
-Votre demande a bien été prise en compte.
-</p>
-
-<div class="merci-box">
-
-<p><strong>Prochaine étape :</strong></p>
-
-<p>
-Nous vous recontactons rapidement pour étudier votre besoin et vous proposer la solution la plus adaptée.
-</p>
-
-<p>
-Réponse sous <strong>24h maximum</strong>
-</p>
-
-</div>
-
-<div class="merci-contact">
-
-<p>Besoin d’une réponse immédiate ?</p>
-
-<a href="tel:0685306973" class="btn">Appeler maintenant</a>
-
-</div>
-
-<a href="index.html" class="retour">← Retour à l'accueil</a>
-
-</div>
-
-</section>
-<footer>
-  <div class="footer-container">
-
-    <h3>JC Service</h3>
-
-    <p class="footer-sub">
-      Salle de bain • Chauffage • Climatisation
-    </p>
-
-    <p>
-      9a route de Paris<br>
-      67117 Ittenheim
-    </p>
-
-    <p class="contact">
-      📞 06 85 30 69 73<br>
-      ✉️ instal.jcservice@gmail.com
-    </p>
-
-    <hr>
-
-    <p class="copyright">
-      © 2026 JC Service — Tous droits réservés
-    </p>
-
-  </div>
-</footer>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="logo.png" alt="JC Service"></a>
+      <a class="btn" href="index.html">Accueil</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero center">
+      <div class="wrap" style="max-width:640px">
+        <h1>Demande envoyée</h1>
+        <p class="hero-desc">Merci. Nous vous recontactons rapidement, sous 24h ouvrées en principe.</p>
+        <div class="card" style="margin:24px auto;text-align:left">
+          <p><strong>Prochaine étape</strong></p>
+          <p>On étudie le besoin. Si c’est urgent, appelez.</p>
+        </div>
+        <a class="btn" href="tel:+33685306973">Appeler maintenant</a>
+        <p><a href="index.html">Retour à l’accueil</a></p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap legal">© 2026 JC Service</div>
+  </footer>
 </body>
 </html>
