@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" fill="none" role="img" aria-label="JC Service">
+  <path d="M320 6L534 78" stroke="#C8A96A" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M320 6L106 78" stroke="#C8A96A" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M106 122L320 194" stroke="#C8A96A" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M534 122L320 194" stroke="#C8A96A" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="152" y="118" font-family="Georgia, 'Times New Roman', Times, serif" font-size="58" fill="#C8A96A">JC</text>
+  <text x="262" y="112" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="500" fill="#2A2A2A" letter-spacing="6">SERVICE</text>
+</svg>
