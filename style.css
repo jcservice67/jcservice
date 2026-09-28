@@ -485,6 +485,42 @@ footer h3 { color: #fff; font-size: 22px; }
   padding: 32px;
 }
 
+.reviews {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.review {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 26px 24px;
+}
+
+.review-stars {
+  color: var(--gold-dark);
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.review p { font-size: 15px; }
+.review-author { font-weight: 600; margin: 0 0 4px; }
+.review-meta { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+.review-source { color: var(--muted); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; margin: 16px 0 0; }
+
+.score-band {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.score-band .big {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
 @media (max-width: 960px) {
   .proof-row,
   .grid-3,
@@ -521,7 +557,9 @@ footer h3 { color: #fff; font-size: 22px; }
     grid-template-columns: 1fr;
   }
 
-  .hero { padding: 40px 0 36px; }
+  .reviews {
+    grid-template-columns: 1fr;
+  }
   .hero h1 { max-width: none; }
   .mobile-cta { display: grid; }
   body { padding-bottom: 56px; }
