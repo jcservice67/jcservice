@@ -47,7 +47,7 @@
         .catch(function () {
           form.dataset.sent = "1";
           var next = form.querySelector("[name=_next]");
-          if (next) next.value = "http://jcservice.fr/merci.html";
+          if (next) next.value = "https://jcservice.fr/merci.html";
           form.submit();
         })
         .finally(function () {
