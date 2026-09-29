@@ -2,9 +2,16 @@
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".site-nav");
   if (toggle && nav) {
+    toggle.replaceChildren();
+    for (var i = 0; i < 3; i++) {
+      var bar = document.createElement("span");
+      bar.className = "nav-toggle-bar";
+      toggle.appendChild(bar);
+    }
     toggle.addEventListener("click", function () {
       var open = nav.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
     });
   }
 

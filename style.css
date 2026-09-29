@@ -105,15 +105,38 @@ a { color: inherit; }
 
 .nav-toggle {
   display: none;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  border-radius: 0;
-  padding: 8px 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
   cursor: pointer;
-  font-family: Inter, sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--ink);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
 }
 
 .btn {
@@ -579,20 +602,35 @@ footer h3 { color: #fff; font-size: 22px; }
 
   .proof-row div { border-right: none; border-bottom: 1px solid var(--line); }
 
+  .site-header { position: sticky; }
+
   .site-nav {
     display: none;
     position: absolute;
-    top: 84px;
+    top: 100%;
     left: 0;
     right: 0;
-    background: var(--bg);
+    background: var(--paper);
     border-bottom: 1px solid var(--line);
-    padding: 18px 24px 22px;
+    padding: 8px 24px 12px;
     flex-direction: column;
+    gap: 0;
+    box-shadow: 0 16px 32px rgba(26, 26, 26, 0.08);
   }
 
+  .site-nav a {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 15px;
+  }
+
+  .site-nav a:last-child { border-bottom: 0; }
+
   .site-nav.is-open { display: flex; }
-  .nav-toggle { display: block; }
+  .nav-toggle {
+    display: flex;
+    margin-left: auto;
+  }
   .header-actions .call { display: none; }
 }
 
@@ -614,4 +652,6 @@ footer h3 { color: #fff; font-size: 22px; }
   .mobile-cta { display: grid; }
   body { padding-bottom: 56px; }
   .brand img { width: 132px; height: auto; }
+  .header-actions { display: none; }
+  .header-inner { min-height: 72px; }
 }
