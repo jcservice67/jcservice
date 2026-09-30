@@ -16,13 +16,37 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Installation de pompe à chaleur",
-    "provider": { "@type": "HVACBusiness", "name": "JC Service", "url": "https://jcservice.fr/" },
-    "areaServed": "Ittenheim",
+    "name": "Installation de pompe à chaleur à Ittenheim",
+    "serviceType": "Pompe à chaleur air/eau",
+    "provider": { "@id": "https://jcservice.fr/#entreprise" },
+    "areaServed": ["Ittenheim", "Kochersberg", "Strasbourg"],
     "url": "https://jcservice.fr/pompe-a-chaleur.html"
   }
   </script>
-  <link rel="stylesheet" href="style.css?v=10">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Intervenez-vous pour une pompe à chaleur à Ittenheim ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. L’atelier est à Ittenheim. Pose et entretien aussi dans le Kochersberg et à Strasbourg Ouest." }
+      },
+      {
+        "@type": "Question",
+        "name": "Faut-il un artisan RGE QualiPAC pour les aides ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "En général oui pour MaPrimeRénov’ et les CEE. JC Service est QualiPAC n° QPAC/85843." }
+      },
+      {
+        "@type": "Question",
+        "name": "Quel délai pour un devis ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Réponse sous 24h ouvrées en principe. Le chiffrage précis se fait après visite." }
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="style.css?v=11">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -54,7 +78,7 @@
       <div class="wrap">
         <p class="baseline">Chauffage thermodynamique</p>
         <h1>Pompe à chaleur : le bon dimensionnement, pas la machine trop grosse.</h1>
-        <p class="hero-desc">Remplacement de chaudière fioul ou gaz, maison existante, radiateurs ou plancher. Entreprise QualiPAC n° QPAC/85843 (chauffage et ECS). On part du logement, pas d’un catalogue.</p>
+        <p class="hero-desc">Remplacement de chaudière fioul ou gaz, maison existante, radiateurs ou plancher. Entreprise QualiPAC n° QPAC/85843 (chauffage et ECS). On part du logement, pas d’un catalogue. Installation à Ittenheim, dans le Kochersberg et à Strasbourg Ouest.</p>
         <div class="hero-cta">
           <a class="btn" href="contact.html">Étudier mon logement</a>
           <a class="btn btn-ghost" href="aides.html">Aides possibles</a>
@@ -85,6 +109,22 @@
         <p>Isolation réelle, émetteurs (radiateurs haute température vs plancher), besoin d’eau chaude, place pour l’unité extérieure et le bruit vis-à-vis des voisins.</p>
         <p>Une PAC sous-dimensionnée fatigue. Une PAC surdimensionnée cyclera et coûtera trop cher. L’étude sur place n’est pas un luxe.</p>
         <p class="note">Les aides (MaPrimeRénov’, CEE, TVA) dépendent de l’éligibilité du logement et de l’entreprise. On constitue le dossier avec vous, sans garantir un reste à charge avant étude.</p>
+        <p>Zone : <a href="zone.html">Ittenheim, Kochersberg, Strasbourg Ouest</a>. Photos de pose : <a href="realisations.html">réalisations</a>.</p>
+        <div class="faq">
+          <h2>Questions fréquentes</h2>
+          <details>
+            <summary>Intervenez-vous pour une pompe à chaleur à Ittenheim ?</summary>
+            <p>Oui. L’atelier est à Ittenheim (9a route de Paris). On pose et on entretient aussi dans le Kochersberg et à Strasbourg Ouest.</p>
+          </details>
+          <details>
+            <summary>Faut-il un artisan RGE QualiPAC pour les aides ?</summary>
+            <p>En général oui pour MaPrimeRénov’ et les CEE sur PAC / CET. JC Service est QualiPAC n° QPAC/85843 (chauffage et ECS).</p>
+          </details>
+          <details>
+            <summary>Quel délai pour un devis ?</summary>
+            <p>Réponse sous 24h ouvrées en principe, après votre demande. Le chiffrage précis se fait après visite du logement.</p>
+          </details>
+        </div>
       </div>
     </section>
   </main>
@@ -115,6 +155,7 @@
       <div class="social-links">
         <a class="social-btn" href="https://www.facebook.com/p/JC-service-61587701386650/" target="_blank" rel="noopener noreferrer">Facebook</a>
         <a class="social-btn" href="https://www.instagram.com/jcservice67/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="social-btn" href="https://www.google.com/maps/search/?api=1&query=JC+Service+9a+route+de+Paris+67117+Ittenheim" target="_blank" rel="noopener noreferrer">Google</a>
       </div>
     </div>
     <div class="wrap legal">© 2026 JC Service</div>
@@ -123,6 +164,6 @@
     <a href="tel:+33685306973">Appeler</a>
     <a class="devis" href="contact.html">Devis</a>
   </nav>
-  <script src="site.js?v=10"></script>
+  <script src="site.js?v=11"></script>
 </body>
 </html>

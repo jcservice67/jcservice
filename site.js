@@ -65,4 +65,34 @@
         });
     });
   });
+
+  var hasLocal = Array.prototype.some.call(document.querySelectorAll('script[type="application/ld+json"]'), function (el) {
+    return (el.textContent || "").indexOf("HVACBusiness") !== -1;
+  });
+  if (!hasLocal) {
+    var ld = document.createElement("script");
+    ld.type = "application/ld+json";
+    ld.id = "ld-local";
+    ld.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "HVACBusiness",
+      "@id": "https://jcservice.fr/#entreprise",
+      "name": "JC Service",
+      "url": "https://jcservice.fr/",
+      "image": "https://jcservice.fr/logo-hero.png",
+      "telephone": "+33685306973",
+      "email": "contact@jcservice.fr",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9a route de Paris",
+        "addressLocality": "Ittenheim",
+        "postalCode": "67117",
+        "addressRegion": "Bas-Rhin",
+        "addressCountry": "FR"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 48.6032315, "longitude": 7.5979676 },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=48.6032315,7.5979676"
+    });
+    document.head.appendChild(ld);
+  }
 })();
