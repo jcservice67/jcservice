@@ -3,49 +3,49 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://jcservice.fr/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://jcservice.fr/pompe-a-chaleur.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://jcservice.fr/ballon-thermodynamique.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jcservice.fr/climatisation.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jcservice.fr/chauffage.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jcservice.fr/entretien-depannage.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jcservice.fr/aides.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jcservice.fr/zone.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://jcservice.fr/realisations.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://jcservice.fr/realisations/pac-apres.jpg</image:loc><image:title>Pompe à chaleur posée à Ittenheim</image:title></image:image>
     <image:image><image:loc>https://jcservice.fr/realisations/cet-apres.jpg</image:loc><image:title>Ballon thermodynamique</image:title></image:image>
@@ -54,32 +54,32 @@
   </url>
   <url>
     <loc>https://jcservice.fr/avis.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jcservice.fr/a-propos.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jcservice.fr/contact.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jcservice.fr/nos-formules.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jcservice.fr/salle-de-bain.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jcservice.fr/mentions-legales.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <priority>0.3</priority>
   </url>
 </urlset>
