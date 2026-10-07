@@ -168,6 +168,108 @@ a { color: inherit; }
   padding: 72px 0 56px;
 }
 
+.hero-live {
+  position: relative;
+  overflow: hidden;
+  min-height: min(88vh, 820px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 88px 0 72px;
+}
+
+.hero-bg,
+.hero-veil {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: -8%;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-slide-a {
+  background-image: url("hero-renovation.jpg");
+  animation: heroKen 28s ease-in-out infinite, heroFadeA 28s ease-in-out infinite;
+}
+
+.hero-slide-b {
+  background-image: url("realisations/sdb-apres.jpg");
+  background-position: 60% center;
+  animation: heroKen 28s ease-in-out infinite, heroFadeB 28s ease-in-out infinite;
+}
+
+.hero-veil {
+  background:
+    linear-gradient(180deg, rgba(18, 16, 12, 0.42) 0%, rgba(18, 16, 12, 0.55) 45%, rgba(18, 16, 12, 0.62) 100%),
+    linear-gradient(90deg, rgba(18, 16, 12, 0.25), transparent 30%, transparent 70%, rgba(18, 16, 12, 0.25));
+}
+
+.hero-live .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-live .hero-logo {
+  filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.35));
+}
+
+.hero-live .baseline {
+  color: #e4c27a;
+}
+
+.hero-live h1 {
+  color: #fff;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.hero-live .hero-desc {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.hero-live .pills li {
+  border-color: rgba(228, 194, 122, 0.7);
+  color: #f3e6c8;
+  background: rgba(18, 16, 12, 0.28);
+}
+
+.hero-live .btn-ghost {
+  border-color: rgba(255, 255, 255, 0.85);
+  color: #fff;
+}
+
+.hero-live .btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+@keyframes heroKen {
+  0%, 100% { transform: scale(1.05) translate3d(0, 0, 0); }
+  50% { transform: scale(1.14) translate3d(-1.5%, -1%, 0); }
+}
+
+@keyframes heroFadeA {
+  0%, 38%, 100% { opacity: 1; }
+  50%, 88% { opacity: 0; }
+}
+
+@keyframes heroFadeB {
+  0%, 38%, 100% { opacity: 0; }
+  50%, 88% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide {
+    animation: none;
+    inset: 0;
+    transform: none;
+  }
+  .hero-slide-b { opacity: 0; }
+}
+
 .hero-logo {
   width: min(380px, 82vw);
   height: auto;
