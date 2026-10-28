@@ -95,4 +95,56 @@
     });
     document.head.appendChild(ld);
   }
+
+  var shots = document.querySelectorAll(".shot img");
+  if (shots.length) {
+    var overlay = document.createElement("div");
+    overlay.className = "lightbox";
+    overlay.setAttribute("hidden", "");
+    var closeBtn = document.createElement("button");
+    closeBtn.type = "button";
+    closeBtn.className = "lightbox-close";
+    closeBtn.setAttribute("aria-label", "Fermer");
+    closeBtn.textContent = "Fermer";
+    var big = document.createElement("img");
+    big.alt = "";
+    overlay.appendChild(closeBtn);
+    overlay.appendChild(big);
+    document.body.appendChild(overlay);
+
+    function closeLightbox() {
+      overlay.setAttribute("hidden", "");
+      document.body.style.overflow = "";
+    }
+
+    function openLightbox(img) {
+      big.src = img.currentSrc || img.src;
+      big.alt = img.alt || "";
+      overlay.removeAttribute("hidden");
+      document.body.style.overflow = "hidden";
+      closeBtn.focus();
+    }
+
+    shots.forEach(function (img) {
+      img.setAttribute("tabindex", "0");
+      img.setAttribute("role", "button");
+      img.addEventListener("click", function () {
+        openLightbox(img);
+      });
+      img.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openLightbox(img);
+        }
+      });
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) closeLightbox();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !overlay.hasAttribute("hidden")) closeLightbox();
+    });
+  }
 })();

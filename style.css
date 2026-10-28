@@ -798,6 +798,7 @@ footer .social-block {
   object-fit: cover;
   display: block;
   background: #eee;
+  cursor: zoom-in;
 }
 
 .shot figcaption {
@@ -870,4 +871,43 @@ footer .social-block {
   .brand img { width: auto; height: 48px; max-width: 168px; }
   .header-actions { display: none; }
   .header-inner { min-height: 72px; }
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(26, 26, 26, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 24px 24px;
+  cursor: zoom-out;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox img {
+  max-width: min(1100px, 100%);
+  max-height: calc(100vh - 80px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  cursor: default;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font: 500 13px/1 Inter, system-ui, sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
 }
