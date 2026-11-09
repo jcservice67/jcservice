@@ -991,3 +991,109 @@ footer .social-block {
   text-transform: uppercase;
   cursor: pointer;
 }
+
+/* Accueil : plus de joie de vivre */
+.page-home {
+  --bg: #f8f1e4;
+  --soft: #f3e6d0;
+}
+
+.page-home .hero-live h1 {
+  max-width: 13ch;
+}
+
+.page-home .hero-veil {
+  background:
+    linear-gradient(180deg, rgba(70, 42, 18, 0.06) 0%, rgba(48, 28, 12, 0.18) 36%, rgba(32, 18, 8, 0.48) 100%),
+    linear-gradient(90deg, rgba(90, 50, 16, 0.1), transparent 28%, transparent 72%, rgba(90, 50, 16, 0.1));
+}
+
+.page-home .btn {
+  border-radius: 999px;
+}
+
+.page-home .card {
+  border-radius: 16px;
+}
+
+.page-home .card-photo .card-media {
+  height: 196px;
+}
+
+.page-home .quote-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 920px;
+}
+
+.page-home .quote-duo blockquote {
+  background: var(--paper);
+  border-radius: 18px;
+  padding: 32px 28px 28px;
+  box-shadow: 0 10px 28px rgba(90, 62, 28, 0.06);
+  text-align: left;
+}
+
+.page-home .quote-duo p {
+  font-size: clamp(18px, 2vw, 24px);
+}
+
+.page-home .photo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.page-home .photo-strip a {
+  flex: 1 1 240px;
+  max-width: 340px;
+  background: #fffdf8;
+  padding: 10px 10px 36px;
+  border-radius: 4px;
+  box-shadow: 0 14px 30px rgba(90, 62, 28, 0.12);
+  transform: rotate(-1.8deg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.page-home .photo-strip a:nth-child(2) { transform: rotate(2deg); }
+.page-home .photo-strip a:nth-child(3) { transform: rotate(-1.2deg); }
+
+.page-home .photo-strip a:hover {
+  transform: rotate(0deg) translateY(-6px) scale(1.03);
+  box-shadow: 0 20px 36px rgba(90, 62, 28, 0.16);
+}
+
+.page-home .photo-strip img {
+  height: 210px;
+  border-radius: 2px;
+}
+
+.page-home .cta {
+  background: linear-gradient(165deg, #3d2a18 0%, #6a4524 58%, #c0944a 140%);
+}
+
+.page-home .cta p { color: #f0e2c8; }
+
+.page-home .proof-row {
+  background: var(--paper);
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  margin: 20px 0 8px;
+}
+
+.page-home .section.soft {
+  background:
+    radial-gradient(1200px 280px at 50% -40px, rgba(224, 168, 80, 0.22), transparent 70%),
+    var(--soft);
+}
+
+@media (max-width: 700px) {
+  .page-home .quote-duo { grid-template-columns: 1fr; }
+  .page-home .hero-live h1 { max-width: none; }
+  .page-home .photo-strip a { transform: none; }
+  .page-home .photo-strip a:nth-child(2),
+  .page-home .photo-strip a:nth-child(3) { transform: none; }
+}
