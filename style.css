@@ -352,7 +352,10 @@ hr.gold-rule {
 }
 
 .proof-row div {
-  padding: 22px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 22px 18px;
   text-align: center;
   border-right: 1px solid var(--line);
 }
