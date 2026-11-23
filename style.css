@@ -83,7 +83,8 @@ a { color: inherit; }
   min-width: 0;
 }
 
-.rge-mark {
+.rge-mark,
+.compagnons-mark {
   height: 62px;
   width: auto;
   max-width: none;
@@ -977,7 +978,8 @@ footer .social-block {
   }
 
   .brand img { height: 108px; }
-  .rge-mark { height: 56px; }
+  .rge-mark,
+  .compagnons-mark { height: 56px; }
   .header-logos { gap: 14px; }
 
   .site-nav {
@@ -1045,7 +1047,8 @@ footer .social-block {
 
 @media (max-width: 700px) {
   .brand img { height: 86px; }
-  .rge-mark { height: 44px; }
+  .rge-mark,
+  .compagnons-mark { height: 44px; }
   .header-logos { gap: 10px; }
   .header-actions { display: none; }
   .header-inner { min-height: 96px; padding: 8px 0; gap: 12px; }
