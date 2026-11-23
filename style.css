@@ -276,139 +276,6 @@ a { color: inherit; }
   padding: 72px 0 56px;
 }
 
-.hero-live {
-  position: relative;
-  overflow: hidden;
-  min-height: min(88vh, 820px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 88px 0 72px;
-}
-
-.hero-bg,
-.hero-veil {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.hero-bg {
-  isolation: isolate;
-}
-
-.hero-imprint {
-  position: absolute;
-  z-index: 2;
-  left: 50%;
-  top: 11%;
-  width: min(420px, 62vw);
-  transform: translateX(-50%);
-  mix-blend-mode: multiply;
-  opacity: 0.88;
-  filter: contrast(1.12) saturate(1.08);
-}
-
-.hero-slide {
-  position: absolute;
-  inset: -8%;
-  background-size: cover;
-  background-position: center;
-}
-
-.hero-slide-a {
-  background-image: url("hero-renovation.jpg");
-  animation: heroKen 36s ease-in-out infinite, heroFadeA 36s ease-in-out infinite;
-}
-
-.hero-slide-b {
-  background-image: url("realisations/sdb-apres.jpg");
-  background-position: 60% center;
-  animation: heroKen 36s ease-in-out infinite, heroFadeB 36s ease-in-out infinite;
-}
-
-.hero-slide-c {
-  background-image: url("realisations/sdb-combles-apres.jpg");
-  background-position: 55% center;
-  animation: heroKen 36s ease-in-out infinite, heroFadeC 36s ease-in-out infinite;
-}
-
-.hero-veil {
-  background:
-    linear-gradient(180deg, rgba(48, 32, 16, 0.12) 0%, rgba(42, 28, 14, 0.28) 32%, rgba(36, 22, 12, 0.52) 64%, rgba(32, 20, 10, 0.68) 100%),
-    linear-gradient(90deg, rgba(48, 32, 16, 0.2), transparent 30%, transparent 70%, rgba(48, 32, 16, 0.2));
-}
-
-.hero-live .wrap {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: min(26vh, 220px);
-}
-
-.hero-live .baseline {
-  color: #e4c27a;
-}
-
-.hero-live h1 {
-  color: #fff;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
-}
-
-.hero-live .hero-desc {
-  color: rgba(255, 255, 255, 0.88);
-}
-
-.hero-live .pills li {
-  border-color: rgba(228, 194, 122, 0.7);
-  color: #f3e6c8;
-  background: rgba(18, 16, 12, 0.28);
-}
-
-.hero-live .btn-ghost {
-  border-color: rgba(255, 255, 255, 0.85);
-  color: #fff;
-}
-
-.hero-live .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-@keyframes heroKen {
-  0%, 100% { transform: scale(1.05) translate3d(0, 0, 0); }
-  50% { transform: scale(1.14) translate3d(-1.5%, -1%, 0); }
-}
-
-@keyframes heroFadeA {
-  0%, 26% { opacity: 1; }
-  33%, 93% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes heroFadeB {
-  0%, 26% { opacity: 0; }
-  33%, 59% { opacity: 1; }
-  66%, 100% { opacity: 0; }
-}
-
-@keyframes heroFadeC {
-  0%, 59% { opacity: 0; }
-  66%, 93% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-slide {
-    animation: none;
-    inset: 0;
-    transform: none;
-  }
-  .hero-slide-b,
-  .hero-slide-c { opacity: 0; }
-}
-
 .hero-logo {
   width: min(380px, 82vw);
   height: auto;
@@ -1154,14 +1021,12 @@ footer .social-block {
   --soft: #f3e6d0;
 }
 
-.page-home .hero-live h1 {
-  max-width: 13ch;
+.page-home .hero {
+  padding: 64px 0 36px;
 }
 
-.page-home .hero-veil {
-  background:
-    linear-gradient(180deg, rgba(70, 42, 18, 0.06) 0%, rgba(48, 28, 12, 0.18) 36%, rgba(32, 18, 8, 0.48) 100%),
-    linear-gradient(90deg, rgba(90, 50, 16, 0.1), transparent 28%, transparent 72%, rgba(90, 50, 16, 0.1));
+.page-home .hero h1 {
+  max-width: 14ch;
 }
 
 .page-home .btn {
@@ -1248,7 +1113,7 @@ footer .social-block {
 
 @media (max-width: 700px) {
   .page-home .quote-duo { grid-template-columns: 1fr; }
-  .page-home .hero-live h1 { max-width: none; }
+  .page-home .hero h1 { max-width: none; }
   .page-home .photo-strip a { transform: none; }
   .page-home .photo-strip a:nth-child(2),
   .page-home .photo-strip a:nth-child(3) { transform: none; }
