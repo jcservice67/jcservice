@@ -1083,21 +1083,25 @@ footer .social-block {
   gap: 20px;
 }
 
-.page-home .photo-strip a {
+.page-home .photo-strip button {
   flex: 1 1 240px;
   max-width: 340px;
   background: #fffdf8;
   padding: 10px 10px 36px;
+  border: 0;
   border-radius: 4px;
   box-shadow: 0 14px 30px rgba(90, 62, 28, 0.12);
   transform: rotate(-1.8deg);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: zoom-in;
+  font: inherit;
+  color: inherit;
 }
 
-.page-home .photo-strip a:nth-child(2) { transform: rotate(2deg); }
-.page-home .photo-strip a:nth-child(3) { transform: rotate(-1.2deg); }
+.page-home .photo-strip button:nth-child(2) { transform: rotate(2deg); }
+.page-home .photo-strip button:nth-child(3) { transform: rotate(-1.2deg); }
 
-.page-home .photo-strip a:hover {
+.page-home .photo-strip button:hover {
   transform: rotate(0deg) translateY(-6px) scale(1.03);
   box-shadow: 0 20px 36px rgba(90, 62, 28, 0.16);
 }
@@ -1130,7 +1134,7 @@ footer .social-block {
 @media (max-width: 700px) {
   .page-home .quote-duo { grid-template-columns: 1fr; }
   .page-home .hero h1 { max-width: none; }
-  .page-home .photo-strip a { transform: none; }
-  .page-home .photo-strip a:nth-child(2),
-  .page-home .photo-strip a:nth-child(3) { transform: none; }
+  .page-home .photo-strip button { transform: none; }
+  .page-home .photo-strip button:nth-child(2),
+  .page-home .photo-strip button:nth-child(3) { transform: none; }
 }

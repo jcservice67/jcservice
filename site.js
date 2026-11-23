@@ -144,7 +144,7 @@
     document.head.appendChild(ld);
   }
 
-  var shots = document.querySelectorAll(".shot img");
+  var shots = document.querySelectorAll(".shot img, .photo-strip img");
   if (shots.length) {
     var overlay = document.createElement("div");
     overlay.className = "lightbox";
@@ -174,16 +174,19 @@
     }
 
     shots.forEach(function (img) {
-      img.setAttribute("tabindex", "0");
-      img.setAttribute("role", "button");
-      img.addEventListener("click", function () {
+      var trigger = img.closest("button") || img;
+      if (!img.closest("button")) {
+        img.setAttribute("tabindex", "0");
+        img.setAttribute("role", "button");
+        img.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openLightbox(img);
+          }
+        });
+      }
+      trigger.addEventListener("click", function () {
         openLightbox(img);
-      });
-      img.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          openLightbox(img);
-        }
       });
     });
 
