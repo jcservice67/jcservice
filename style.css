@@ -801,6 +801,13 @@ footer .social-block {
 .prose { max-width: 720px; margin: 0 auto; }
 .prose h2 { margin-top: 28px; }
 
+.hero .pac-lead {
+  text-align: left;
+  margin: 28px auto 8px;
+}
+
+.hero .pac-lead + .hero-cta { margin-top: 32px; }
+
 .communes {
   display: flex;
   flex-wrap: wrap;
