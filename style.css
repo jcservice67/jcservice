@@ -375,6 +375,7 @@ hr.gold-rule {
 
 .section-head h2 { font-size: clamp(28px, 3vw, 36px); }
 .section-head p { color: var(--muted); }
+.section-head-wide { max-width: 760px; }
 
 .grid-3,
 .grid-2 {
@@ -493,6 +494,46 @@ hr.gold-rule {
   font-weight: 600;
   letter-spacing: 0.16em;
   margin-bottom: 8px;
+}
+
+.steps.steps-detail {
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.steps.steps-detail .step {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 4px 8px;
+  align-items: start;
+  background: transparent;
+  border-top: 0;
+  border-radius: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 26px 0 24px;
+}
+
+.steps.steps-detail .step:first-child { border-top: 1px solid var(--line); }
+
+.steps.steps-detail .step-num {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  margin: 2px 0 0;
+}
+
+.steps.steps-detail h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.steps.steps-detail p {
+  font-size: 16px;
+  line-height: 1.65;
 }
 
 .cta {
