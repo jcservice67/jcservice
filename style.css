@@ -826,6 +826,20 @@ footer .social-block {
   padding: 32px;
 }
 
+.zone-places {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.zone-places span { display: block; }
+
+.stork {
+  width: 58px;
+  height: auto;
+  flex: none;
+}
+
 .reviews {
   display: grid;
   grid-template-columns: 1fr 1fr;
