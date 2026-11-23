@@ -16,7 +16,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Service","name":"Intervention chauffage et pompe à chaleur Ittenheim Kochersberg","provider":{"@id":"https://jcservice.fr/#entreprise"},"areaServed":["Ittenheim","Furdenheim","Achenheim","Wolfisheim","Oberhausbergen","Kochersberg","Strasbourg"],"url":"https://jcservice.fr/zone.html"}
   </script>
-  <link rel="stylesheet" href="style.css?v=17">
+  <link rel="stylesheet" href="style.css?v=20">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -24,21 +24,27 @@
     <div class="wrap header-inner">
       <a class="brand" href="index.html"><img src="logo.png" alt="JC Service"></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">Menu</button>
-      <nav class="site-nav">
-        <a href="index.html">Accueil</a>
-        <a href="pompe-a-chaleur.html">Pompe à chaleur</a>
-        <a href="ballon-thermodynamique.html">Ballon thermo.</a>
-        <a href="climatisation.html">Climatisation</a>
-        <a href="entretien-depannage.html">Entretien</a>
-        <a href="aides.html">Aides</a>
-        <a href="salle-de-bain.html">Salle de bain</a>
-        <a href="realisations.html">Réalisations</a>
-        <a href="avis.html">Avis</a>
-        <a href="a-propos.html">L’entreprise</a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <div class="nav-item">
+          <button class="nav-parent" type="button" aria-expanded="false" aria-haspopup="true">Nos services et prestations</button>
+          <div class="nav-sub">
+            <a href="pompe-a-chaleur.html">Pompe à chaleur</a>
+            <a href="chauffage.html">Chauffage</a>
+            <a href="climatisation.html">Climatisation</a>
+            <a href="ballon-thermodynamique.html">Ballon thermodynamique</a>
+            <a href="salle-de-bain.html">Salle de bain</a>
+            <a href="entretien-depannage.html">Entretien et dépannage</a>
+            <a href="nos-formules.html">Formules d’entretien</a>
+            <a href="aides.html">Aides</a>
+          </div>
+        </div>
+        <a href="realisations.html">Nos réalisations</a>
+        <a href="avis.html">Vos avis</a>
+        <a class="is-active" href="a-propos.html">Qui sommes-nous</a>
+        <a href="contact.html">Contact</a>
       </nav>
       <div class="header-actions">
         <a class="call" href="tel:+33685306973">06 85 30 69 73</a>
-        <a class="btn" href="contact.html">Devis</a>
       </div>
     </div>
   </header>
@@ -90,6 +96,6 @@
     <a href="tel:+33685306973">Appeler</a>
     <a class="devis" href="contact.html">Devis</a>
   </nav>
-  <script src="site.js?v=12"></script>
+  <script src="site.js?v=13"></script>
 </body>
 </html>

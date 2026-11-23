@@ -8,10 +8,58 @@
       bar.className = "nav-toggle-bar";
       toggle.appendChild(bar);
     }
+    function closeSubmenus() {
+      document.querySelectorAll(".nav-item.is-open").forEach(function (item) {
+        item.classList.remove("is-open");
+        var parent = item.querySelector(".nav-parent");
+        if (parent) parent.setAttribute("aria-expanded", "false");
+      });
+    }
+
     toggle.addEventListener("click", function () {
       var open = nav.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
       toggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+      if (!open) closeSubmenus();
+    });
+
+    nav.querySelectorAll(".nav-parent").forEach(function (parent) {
+      parent.addEventListener("click", function (e) {
+        e.stopPropagation();
+        var item = parent.closest(".nav-item");
+        var open = !item.classList.contains("is-open");
+        closeSubmenus();
+        if (open) {
+          item.classList.add("is-open");
+          parent.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!nav.contains(e.target)) closeSubmenus();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        closeSubmenus();
+        if (nav.classList.contains("is-open")) {
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Ouvrir le menu");
+        }
+      }
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (window.matchMedia("(max-width: 1180px)").matches) {
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Ouvrir le menu");
+          closeSubmenus();
+        }
+      });
     });
   }
 

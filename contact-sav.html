@@ -12,7 +12,7 @@
   <meta property="og:title" content="Demande d’entretien | JC Service">
   <meta property="og:description" content="Souscrire un contrat d’entretien JC Service : estimation selon équipements et formule.">
   <meta property="og:image" content="https://jcservice.fr/logo-hero.png">
-  <link rel="stylesheet" href="style.css?v=17">
+  <link rel="stylesheet" href="style.css?v=20">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,10 +20,24 @@
     <div class="wrap header-inner">
       <a class="brand" href="index.html"><img src="logo.png" alt="JC Service"></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">Menu</button>
-      <nav class="site-nav">
-        <a href="index.html">Accueil</a>
-        <a href="entretien-depannage.html">Entretien</a>
-        <a href="nos-formules.html">Tarifs</a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <div class="nav-item">
+          <button class="nav-parent is-active" type="button" aria-expanded="false" aria-haspopup="true">Nos services et prestations</button>
+          <div class="nav-sub">
+            <a href="pompe-a-chaleur.html">Pompe à chaleur</a>
+            <a href="chauffage.html">Chauffage</a>
+            <a href="climatisation.html">Climatisation</a>
+            <a href="ballon-thermodynamique.html">Ballon thermodynamique</a>
+            <a href="salle-de-bain.html">Salle de bain</a>
+            <a href="entretien-depannage.html">Entretien et dépannage</a>
+            <a href="nos-formules.html">Formules d’entretien</a>
+            <a href="aides.html">Aides</a>
+          </div>
+        </div>
+        <a href="realisations.html">Nos réalisations</a>
+        <a href="avis.html">Vos avis</a>
+        <a href="a-propos.html">Qui sommes-nous</a>
+        <a href="contact.html">Contact</a>
       </nav>
       <div class="header-actions">
         <a class="call" href="tel:+33685306973">06 85 30 69 73</a>
@@ -91,7 +105,7 @@
     <a href="tel:+33685306973">Urgence</a>
     <a class="devis" href="contact.html">Devis travaux</a>
   </nav>
-  <script src="site.js?v=12"></script>
+  <script src="site.js?v=13"></script>
   <script>
     var prices = {
       essentiel: { chaudiere_gaz: 140, chaudiere_fioul: 160, pac: 160, ballon: 100, clim: 140, adoucisseur: 130 },
