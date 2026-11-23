@@ -496,44 +496,45 @@ hr.gold-rule {
   margin-bottom: 8px;
 }
 
-.steps.steps-detail {
-  grid-template-columns: 1fr;
+.page-home .steps.steps-detail {
+  grid-template-columns: repeat(5, 1fr);
   gap: 0;
-  max-width: 860px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-.steps.steps-detail .step {
-  display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: 4px 8px;
-  align-items: start;
+.page-home .steps.steps-detail .step {
+  display: block;
   background: transparent;
-  border-top: 0;
+  border: 0;
   border-radius: 0;
-  border-bottom: 1px solid var(--line);
-  padding: 26px 0 24px;
+  border-right: 1px solid var(--line);
+  padding: 26px 18px 24px;
 }
 
-.steps.steps-detail .step:first-child { border-top: 1px solid var(--line); }
+.page-home .steps.steps-detail .step:last-child { border-right: none; }
 
-.steps.steps-detail .step-num {
+.page-home .steps.steps-detail .step-num {
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.04em;
-  line-height: 1.15;
-  margin: 2px 0 0;
+  line-height: 1;
+  margin: 0 0 10px;
 }
 
-.steps.steps-detail h3 {
-  font-size: 22px;
+.page-home .steps.steps-detail h3 {
+  font-size: 18px;
   margin-bottom: 8px;
 }
 
-.steps.steps-detail p {
-  font-size: 16px;
-  line-height: 1.65;
+.page-home .steps.steps-detail p {
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .cta {
@@ -1170,6 +1171,15 @@ footer .social-block {
   background:
     radial-gradient(1200px 280px at 50% -40px, rgba(224, 168, 80, 0.22), transparent 70%),
     var(--soft);
+}
+
+@media (max-width: 1100px) {
+  .page-home .steps.steps-detail { grid-template-columns: 1fr; }
+  .page-home .steps.steps-detail .step {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .page-home .steps.steps-detail .step:last-child { border-bottom: none; }
 }
 
 @media (max-width: 700px) {
