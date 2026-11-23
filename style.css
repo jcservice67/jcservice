@@ -581,6 +581,17 @@ footer h3 { color: #fff; font-size: 22px; }
 .footer-sub { color: var(--gold); }
 .footer-nav { display: flex; flex-direction: column; gap: 10px; }
 .footer-nav a { text-decoration: none; color: #b9b3a8; font-size: 14px; }
+
+.footer-simple {
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 40px 72px;
+}
+
+.footer-simple .footer-nav {
+  align-items: flex-end;
+  padding-top: 6px;
+}
 .legal {
   border-top: 1px solid #2a2a2a;
   margin-top: 36px;
@@ -963,9 +974,12 @@ footer .social-block {
   .grid-3,
   .grid-2,
   .steps,
-  .footer-grid {
+  .footer-grid,
+  .footer-simple {
     grid-template-columns: 1fr;
   }
+
+  .footer-simple .footer-nav { align-items: flex-start; padding-top: 0; }
 
   .reviews,
   .before-after,
