@@ -1044,6 +1044,19 @@ footer .social-block {
   height: 196px;
 }
 
+@media (min-width: 961px) {
+  .home-offers {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .home-offers > .card {
+    grid-column: span 2;
+  }
+
+  .home-offers > .card:nth-child(4) { grid-column: 2 / span 2; }
+  .home-offers > .card:nth-child(5) { grid-column: 4 / span 2; }
+}
+
 .page-home .quote-duo {
   display: grid;
   grid-template-columns: 1fr 1fr;
